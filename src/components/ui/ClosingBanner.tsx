@@ -1,6 +1,6 @@
 import type { WhatsAppCta } from "@/content/site";
 import { CtaLink } from "@/components/ui/CtaLink";
-import { SiteIcon } from "@/components/ui/SiteIcon";
+import { ChatCtaLabel } from "@/components/ui/SiteIcon";
 import { inverseButton } from "@/components/ui/styles";
 
 export function ClosingBanner({ title, subtitle, cta }: { title: string; subtitle: string; cta: WhatsAppCta }) {
@@ -11,8 +11,7 @@ export function ClosingBanner({ title, subtitle, cta }: { title: string; subtitl
         <p className="mt-2 text-white/85">{subtitle}</p>
       </div>
       <CtaLink cta={cta} className={inverseButton}>
-        <SiteIcon name="chat" className="h-4 w-4" />
-        {cta.label}
+        <ChatCtaLabel label={cta.label} />
       </CtaLink>
     </div>
   );

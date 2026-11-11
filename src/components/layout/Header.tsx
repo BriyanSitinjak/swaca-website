@@ -9,11 +9,9 @@ import logoMark from "@/asset/logo-mark.png";
 import { site } from "@/content/site";
 import { normalizePath } from "@/lib/seo";
 import { CtaLink } from "@/components/ui/CtaLink";
-import { SiteIcon } from "@/components/ui/SiteIcon";
+import { ChatCtaLabel } from "@/components/ui/SiteIcon";
+import { focusRing, headerButton } from "@/components/ui/styles";
 import { Container } from "./Container";
-
-const waButtonClass =
-  "items-center justify-center gap-2 rounded-full bg-[#0B82B4] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#086F9A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B82B4]";
 
 function navClass(active: boolean, mobile = false) {
   const layout = mobile ? "block w-full px-3 py-3 text-base" : "px-4 py-2 text-sm";
@@ -62,7 +60,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[#E3EEF4] bg-[#F6FAFD]/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 border-b border-[#E3EEF4] bg-[#F6FAFD]">
       <Container>
         <div className="flex h-[4.5rem] items-center justify-between gap-4">
           <Link href="/" aria-label={site.business.logoAlt} className="flex min-w-0 items-center gap-2.5">
@@ -81,14 +79,13 @@ export function Header() {
             <NavItems current={current} />
           </nav>
 
-          <CtaLink cta={site.ctas.header} className={`${waButtonClass} hidden shrink-0 md:inline-flex`}>
-            <SiteIcon name="chat" className="h-4 w-4" />
-            {site.ctas.header.label}
+          <CtaLink cta={site.ctas.header} className={`${headerButton} hidden shrink-0 md:inline-flex`}>
+            <ChatCtaLabel label={site.ctas.header.label} />
           </CtaLink>
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[#153C4B] hover:bg-[#E7F4FB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B82B4] md:hidden"
+            className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[#153C4B] hover:bg-[#E7F4FB] md:hidden ${focusRing}`}
             aria-expanded={open}
             aria-controls="site-menu"
             aria-label={open ? site.chrome.closeMenuLabel : site.chrome.openMenuLabel}
@@ -105,9 +102,8 @@ export function Header() {
             <nav className="flex flex-col gap-1" aria-label={site.footer.menuTitle}>
               <NavItems current={current} mobile />
             </nav>
-            <CtaLink cta={site.ctas.header} className={`${waButtonClass} mt-3 flex w-full`}>
-              <SiteIcon name="chat" className="h-4 w-4" />
-              {site.ctas.header.label}
+            <CtaLink cta={site.ctas.header} className={`${headerButton} mt-3 flex w-full`}>
+              <ChatCtaLabel label={site.ctas.header.label} />
             </CtaLink>
           </Container>
         </div>

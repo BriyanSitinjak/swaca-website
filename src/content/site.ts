@@ -45,19 +45,8 @@ export type PageSeo = {
 
 export type Address = {
   streetAddress: string;
-  addressLocality: string;
-  addressRegion: string;
-  postalCode: string;
-  addressCountry: "ID";
   display: string;
   areaLabel: string;
-};
-
-export type OpeningHours = {
-  dayOfWeek: string[];
-  opens: string;
-  closes: string;
-  label: string;
 };
 
 export type PriceLine = {
@@ -127,7 +116,6 @@ export type SiteContent = {
   contact: {
     whatsappNumber: string;
     whatsappDisplay: string;
-    instagramHandle: string;
     instagramUrl: string;
   };
   address: Address;
@@ -138,7 +126,7 @@ export type SiteContent = {
   };
   hours: {
     summary: string;
-    rows: OpeningHours[];
+    rows: string[];
   };
   areas: string[];
   pickupFeeNote: string;
@@ -154,13 +142,11 @@ export type SiteContent = {
     footerWhatsapp: WhatsAppCta;
   };
   footer: {
-    blurb: string;
     copyright: string;
     menuTitle: string;
     addressTitle: string;
     followTitle: string;
     instagramLabel: string;
-    menu: NavItem[];
   };
   seo: {
     ogImage: string;
@@ -264,15 +250,10 @@ export const site = {
   contact: {
     whatsappNumber: "6285284118281",
     whatsappDisplay: "+62 852-8411-8281",
-    instagramHandle: "Swaca Clean Care",
     instagramUrl: "https://instagram.com/",
   },
   address: {
     streetAddress: "Jl. Jungle Land No.90",
-    addressLocality: "Bogor",
-    addressRegion: "Jawa Barat",
-    postalCode: "16810",
-    addressCountry: "ID",
     display: "Jl. Jungle Land No.90, Karang Tengah, Kec. Babakan Madang, Kabupaten Bogor, Jawa Barat 16810",
     areaLabel: "Sentul City, Bogor",
   },
@@ -283,20 +264,7 @@ export const site = {
   },
   hours: {
     summary: "Buka 08:00 - 17:00 WIB",
-    rows: [
-      {
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "",
-        closes: "",
-        label: "Senin sampai Sabtu: [jam]",
-      },
-      {
-        dayOfWeek: ["Sunday"],
-        opens: "",
-        closes: "",
-        label: "Minggu: [jam / tutup]",
-      },
-    ],
+    rows: ["Senin sampai Sabtu: [jam]", "Minggu: [jam / tutup]"],
   },
   areas: ["Bogor"],
   pickupFeeNote: "Area layanan hingga radius ±10 km dari outlet SWACA",
@@ -332,18 +300,11 @@ export const site = {
     },
   },
   footer: {
-    blurb: "Laundry linen, handuk, dan perlengkapan operasional untuk hospitality dan bisnis.",
     copyright: "© 2026 SWACA Clean & Care. Semua hak dilindungi.",
     menuTitle: "Menu",
     addressTitle: "Alamat",
     followTitle: "Ikuti kami",
     instagramLabel: "Instagram",
-    menu: [
-      { label: "Beranda", href: "/" },
-      { label: "Layanan & Harga", href: "/layanan" },
-      { label: "Tentang Kami", href: "/tentang" },
-      { label: "Kontak", href: "/kontak" },
-    ],
   },
   seo: {
     ogImage: "/og.jpg",

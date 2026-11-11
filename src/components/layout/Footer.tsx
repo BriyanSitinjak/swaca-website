@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="max-w-xs">
             <p className="text-lg font-extrabold tracking-tight">{site.business.name}</p>
-            <p className={`mt-3 ${linkClass}`}>{site.footer.blurb}</p>
+            <p className={`mt-3 ${linkClass}`}>{site.business.description}</p>
           </div>
 
           <div>
@@ -25,7 +25,7 @@ export function Footer() {
           <nav aria-label={site.footer.menuTitle}>
             <p className={columnTitleClass}>{site.footer.menuTitle}</p>
             <ul className="mt-3 space-y-2">
-              {site.footer.menu.map((item) => (
+              {site.nav.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={linkClass}>
                     {item.label}

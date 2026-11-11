@@ -1,4 +1,4 @@
-import { eyebrowText, sectionTitle } from "@/components/ui/styles";
+import { eyebrowText, proseText, sectionTitle } from "@/components/ui/styles";
 
 type SectionHeadingProps = {
   eyebrow?: string;
@@ -16,7 +16,7 @@ export function SectionHeading({ eyebrow, title, description, as = "h2", classNa
       {eyebrow ? <p className={eyebrowText}>{eyebrow}</p> : null}
       <Title className={`${eyebrow ? "mt-2 " : ""}${as === "h1" ? "text-balance " : ""}${sectionTitle}`}>{title}</Title>
       {description ? (
-        <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-[#5C7380]">{description}</p>
+        <p className={`mt-4 max-w-2xl text-pretty ${proseText}`}>{description}</p>
       ) : null}
     </div>
   );

@@ -26,3 +26,12 @@ export function SiteIcon({ name, className }: { name: IconName; className?: stri
   const Icon = icons[name];
   return <Icon className={className} aria-hidden />;
 }
+
+export function ChatCtaLabel({ label }: { label: string }) {
+  return (
+    <>
+      <SiteIcon name="chat" className="h-4 w-4" />
+      {label}
+    </>
+  );
+}

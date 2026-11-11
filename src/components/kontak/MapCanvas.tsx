@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { divIcon } from "leaflet";
+import { site } from "@/content/site";
 import "leaflet/dist/leaflet.css";
 
 const pin = divIcon({
@@ -22,26 +23,25 @@ function RefreshSize() {
   return null;
 }
 
-type MapCanvasProps = {
-  latitude: number;
-  longitude: number;
-  zoom: number;
-  label: string;
-};
-
-export default function MapCanvas({ latitude, longitude, zoom, label }: MapCanvasProps) {
-  const coarse = window.matchMedia("(pointer: coarse)").matches;
+export default function MapCanvas() {
+  const { latitude, longitude, zoom } = site.map;
+  const label = site.kontak.mapCaption;
   const position: [number, number] = [latitude, longitude];
 
   return (
     <MapContainer
       center={position}
       zoom={zoom}
+      className="swaca-map"
+      dragging={false}
       scrollWheelZoom={false}
-      dragging={!coarse}
-      touchZoom={!coarse}
+      touchZoom={false}
+      doubleClickZoom={false}
+      boxZoom={false}
+      keyboard={false}
+      fadeAnimation={false}
+      zoomAnimation={false}
       aria-label={label}
-      style={{ height: "100%", width: "100%" }}
     >
       <RefreshSize />
       <TileLayer
