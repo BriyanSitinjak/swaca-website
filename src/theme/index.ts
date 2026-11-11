@@ -25,14 +25,6 @@ const theme = extendTheme({
     heading: "var(--font-plus-jakarta), sans-serif",
     body: "var(--font-plus-jakarta), sans-serif",
   },
-  styles: {
-    global: {
-      body: {
-        bg: "#F6FAFD",
-        color: "#153C4B",
-      },
-    },
-  },
   radii: {
     card: "1.25rem",
     pill: "999px",
