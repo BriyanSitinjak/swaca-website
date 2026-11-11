@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import { LuMessageCircle } from "react-icons/lu";
 import logoMark from "@/asset/logo-mark.png";
 import { site } from "@/content/site";
 import { normalizePath } from "@/lib/seo";
-import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
+import { CtaLink } from "@/components/ui/CtaLink";
+import { SiteIcon } from "@/components/ui/SiteIcon";
 import { Container } from "./Container";
 
 const waButtonClass =
@@ -21,6 +21,17 @@ function navClass(active: boolean, mobile = false) {
     ? "bg-[#E7F4FB] font-semibold text-[#153C4B]"
     : "font-medium text-[#4E6572] hover:bg-[#E7F4FB]/80";
   return `rounded-full ${layout} ${state}`;
+}
+
+function NavItems({ current, mobile = false }: { current: string; mobile?: boolean }) {
+  return site.nav.map((item) => {
+    const active = current === normalizePath(item.href);
+    return (
+      <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={navClass(active, mobile)}>
+        {item.label}
+      </Link>
+    );
+  });
 }
 
 export function Header() {
@@ -67,20 +78,13 @@ export function Header() {
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex" aria-label={site.footer.menuTitle}>
-            {site.nav.map((item) => {
-              const active = current === normalizePath(item.href);
-              return (
-                <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={navClass(active)}>
-                  {item.label}
-                </Link>
-              );
-            })}
+            <NavItems current={current} />
           </nav>
 
-          <WhatsAppLink cta={site.ctas.header} className={`${waButtonClass} hidden shrink-0 md:inline-flex`}>
-            <LuMessageCircle className="h-4 w-4" aria-hidden />
+          <CtaLink cta={site.ctas.header} className={`${waButtonClass} hidden shrink-0 md:inline-flex`}>
+            <SiteIcon name="chat" className="h-4 w-4" />
             {site.ctas.header.label}
-          </WhatsAppLink>
+          </CtaLink>
 
           <button
             type="button"
@@ -99,19 +103,12 @@ export function Header() {
         <div id="site-menu" className="border-t border-[#E3EEF4] bg-[#F6FAFD] md:hidden">
           <Container className="py-3">
             <nav className="flex flex-col gap-1" aria-label={site.footer.menuTitle}>
-              {site.nav.map((item) => {
-                const active = current === normalizePath(item.href);
-                return (
-                  <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={navClass(active, true)}>
-                    {item.label}
-                  </Link>
-                );
-              })}
+              <NavItems current={current} mobile />
             </nav>
-            <WhatsAppLink cta={site.ctas.header} className={`${waButtonClass} mt-3 flex w-full`}>
-              <LuMessageCircle className="h-4 w-4" aria-hidden />
+            <CtaLink cta={site.ctas.header} className={`${waButtonClass} mt-3 flex w-full`}>
+              <SiteIcon name="chat" className="h-4 w-4" />
               {site.ctas.header.label}
-            </WhatsAppLink>
+            </CtaLink>
           </Container>
         </div>
       ) : null}

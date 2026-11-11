@@ -26,3 +26,32 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
 }
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #e7f4fb;
+  font-family: inherit;
+}
+
+.leaflet-container img {
+  max-width: none;
+  max-height: none;
+}
+
+.swaca-pin {
+  background: transparent;
+  border: none;
+}
+
+.swaca-pin span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0 5px;
+  border: 2px solid #fff;
+  border-radius: 999px 999px 999px 0;
+  background: #0b82b4;
+  box-shadow: 0 6px 14px rgba(11, 130, 180, 0.35);
+  transform: rotate(-45deg);
+}

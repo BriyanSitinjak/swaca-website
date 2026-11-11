@@ -3,12 +3,7 @@ import { Container } from "@/components/layout/Container";
 import { CtaLink } from "@/components/ui/CtaLink";
 import { PhotoSlot } from "@/components/ui/PhotoSlot";
 import { SiteIcon } from "@/components/ui/SiteIcon";
-
-const primaryButton =
-  "inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0B82B4] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#086F9A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B82B4] sm:w-auto";
-
-const secondaryButton =
-  "inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#D5E3EC] bg-white px-5 py-3 text-sm font-semibold text-[#153C4B] transition-colors hover:bg-[#F4FAFD] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B82B4] sm:w-auto";
+import { primaryButton, secondaryButton } from "@/components/ui/styles";
 
 export function Hero() {
   const home = site.home;

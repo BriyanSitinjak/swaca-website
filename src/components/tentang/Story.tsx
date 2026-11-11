@@ -1,6 +1,7 @@
 import { site } from "@/content/site";
 import { Container } from "@/components/layout/Container";
 import { PhotoSlot } from "@/components/ui/PhotoSlot";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Story() {
   const { tentang } = site;
@@ -10,8 +11,7 @@ export function Story() {
       <Container>
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <div>
-            <p className="text-xs font-semibold tracking-[0.16em] text-[#0B82B4]">{tentang.eyebrow}</p>
-            <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-[#102A3A] sm:text-4xl">{tentang.title}</h1>
+            <SectionHeading as="h1" className="max-w-xl" eyebrow={tentang.eyebrow} title={tentang.title} />
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[#5C7380]">{tentang.story}</p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[#153C4B]">{tentang.belief}</p>
           </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { site } from "@/content/site";
-import { WhatsAppLink } from "@/components/ui/WhatsAppLink";
+import { CtaLink } from "@/components/ui/CtaLink";
 import { Container } from "./Container";
 
 const columnTitleClass = "text-sm font-semibold text-white";
@@ -44,9 +44,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <WhatsAppLink cta={site.ctas.footerWhatsapp} className={linkClass}>
+                <CtaLink cta={site.ctas.footerWhatsapp} className={linkClass}>
                   {site.ctas.footerWhatsapp.label}
-                </WhatsAppLink>
+                </CtaLink>
               </li>
             </ul>
           </div>

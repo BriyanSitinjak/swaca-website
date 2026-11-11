@@ -11,11 +11,14 @@ type CtaLinkProps = {
   cta: Cta;
   className?: string;
   children?: ReactNode;
+  /** Use the CTA label as the accessible name when the visible content is only an icon. */
+  labelAsAria?: boolean;
 };
 
-export function CtaLink({ cta, className, children }: CtaLinkProps) {
+export function CtaLink({ cta, className, children, labelAsAria = false }: CtaLinkProps) {
   const page = pageIdFromPathname(usePathname());
   const content = children ?? cta.label;
+  const ariaLabel = labelAsAria ? cta.label : undefined;
 
   if (cta.kind === "whatsapp") {
     return (
@@ -26,6 +29,7 @@ export function CtaLink({ cta, className, children }: CtaLinkProps) {
         data-cta-id={cta.id}
         data-page={page}
         className={className}
+        aria-label={ariaLabel}
       >
         {content}
       </a>
@@ -33,7 +37,7 @@ export function CtaLink({ cta, className, children }: CtaLinkProps) {
   }
 
   return (
-    <Link href={cta.href} data-cta-id={cta.id} data-page={page} className={className}>
+    <Link href={cta.href} data-cta-id={cta.id} data-page={page} className={className} aria-label={ariaLabel}>
       {content}
     </Link>
   );

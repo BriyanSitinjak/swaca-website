@@ -131,7 +131,11 @@ export type SiteContent = {
     instagramUrl: string;
   };
   address: Address;
-  mapsEmbedUrl: string;
+  map: {
+    latitude: number;
+    longitude: number;
+    zoom: number;
+  };
   hours: {
     summary: string;
     rows: OpeningHours[];
@@ -236,10 +240,10 @@ export type SiteContent = {
     hoursIcon: IconName;
     whatsappLabel: string;
     whatsappIcon: IconName;
+    whatsappCta: WhatsAppCta;
     pickupCta: WhatsAppCta;
     mapCaption: string;
     areaTitle: string;
-    areaIntro: string;
   };
 };
 
@@ -258,7 +262,7 @@ export const site = {
     logoAlt: "Logo SWACA Clean & Care",
   },
   contact: {
-    whatsappNumber: "6280000000000",
+    whatsappNumber: "6285284118281",
     whatsappDisplay: "+62 852-8411-8281",
     instagramHandle: "Swaca Clean Care",
     instagramUrl: "https://instagram.com/",
@@ -272,7 +276,11 @@ export const site = {
     display: "Jl. Jungle Land No.90, Karang Tengah, Kec. Babakan Madang, Kabupaten Bogor, Jawa Barat 16810",
     areaLabel: "Sentul City, Bogor",
   },
-  mapsEmbedUrl: "https://maps.app.goo.gl/Ewpa2vfdQxd8qqxz8",
+  map: {
+    latitude: -6.5784814,
+    longitude: 106.8914168,
+    zoom: 16,
+  },
   hours: {
     summary: "Buka 08:00 - 17:00 WIB",
     rows: [
@@ -680,14 +688,19 @@ export const site = {
     hoursIcon: "clock",
     whatsappLabel: "WhatsApp",
     whatsappIcon: "chat",
+    whatsappCta: {
+      kind: "whatsapp",
+      id: "kontak-whatsapp",
+      label: "WhatsApp",
+      message: "Halo, saya mau tanya layanan laundry SWACA",
+    },
     pickupCta: {
       kind: "whatsapp",
       id: "kontak-pickup",
       label: "Minta dijemput",
-      message: "Halo, saya mau minta cucian dijemput",
+      message: "Halo, saya mau minta linen dijemput",
     },
-    mapCaption: "Peta Google Maps (embed lokasi laundry)",
+    mapCaption: "Peta lokasi SWACA Clean & Care",
     areaTitle: "Area antar jemput",
-    areaIntro: "Biaya antar jemput: [gratis / Rp ...]. Di luar area ini? Tanyakan dulu lewat WhatsApp.",
   },
 } satisfies SiteContent;
