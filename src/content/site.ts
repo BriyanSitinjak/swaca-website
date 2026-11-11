@@ -603,7 +603,7 @@ export const site = {
     notes: [
       {
         title: "Biaya antar jemput",
-        body: "[Gratis untuk area layanan / biaya tambahan Rp ...]",
+        body: "TBD",
       },
       {
         title: "Penimbangan",
@@ -611,7 +611,7 @@ export const site = {
       },
       {
         title: "Pembayaran",
-        body: "[Tunai, transfer, atau QRIS]",
+        body: "Tunai, transfer, dan QRIS",
       },
     ],
     closing: {
