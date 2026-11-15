@@ -1,15 +1,13 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { mediaFrame } from "@/components/ui/styles";
 
-const MapCanvas = dynamic(() => import("./MapCanvas"), {
-  ssr: false,
-  loading: () => <div className="h-full min-h-[320px] bg-[#E7F4FB]" aria-hidden />,
-});
+const MapCanvas = dynamic(() => import("./MapCanvas"), { ssr: false });
 
 export function MapFrame() {
   return (
-    <div className="relative z-0 h-full min-h-[320px] overflow-hidden rounded-[1.75rem] border border-[#D5E3EC] bg-[#E7F4FB]">
+    <div className={`z-0 h-full min-h-[320px] ${mediaFrame}`}>
       <div className="absolute inset-0">
         <MapCanvas />
       </div>

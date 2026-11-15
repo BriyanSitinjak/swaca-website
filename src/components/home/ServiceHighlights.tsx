@@ -4,7 +4,7 @@ import { PageSection } from "@/components/layout/PageSection";
 import { CtaLink } from "@/components/ui/CtaLink";
 import { IconBadge } from "@/components/ui/IconBadge";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { bodyText, cardTitle, quietLink, surfaceCard } from "@/components/ui/styles";
+import { bodyText, cardGrid, cardTitle, quietLink, surfaceCard } from "@/components/ui/styles";
 
 function ServiceCard({ item, wide = false }: { item: ServiceHighlight; wide?: boolean }) {
   return (
@@ -29,7 +29,7 @@ export function ServiceHighlights() {
   return (
     <PageSection tone="white">
         <SectionHeading eyebrow={services.eyebrow} title={services.title} />
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className={cardGrid}>
           {featured.map((item) => (
             <ServiceCard key={item.id} item={item} />
           ))}

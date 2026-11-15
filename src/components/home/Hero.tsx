@@ -3,7 +3,7 @@ import { PageSection } from "@/components/layout/PageSection";
 import { CtaLink } from "@/components/ui/CtaLink";
 import { PhotoSlot } from "@/components/ui/PhotoSlot";
 import { ChatCtaLabel, SiteIcon } from "@/components/ui/SiteIcon";
-import { accentIcon, primaryButton, proseText, secondaryButton } from "@/components/ui/styles";
+import { accentIcon, photoTall, primaryButton, proseText, secondaryButton } from "@/components/ui/styles";
 
 export function Hero() {
   const home = site.home;
@@ -38,7 +38,7 @@ export function Hero() {
               </p>
             </div>
           </div>
-          <PhotoSlot photo={home.heroPhoto} className="min-h-[240px] sm:min-h-[320px] lg:min-h-[380px]" />
+          <PhotoSlot photo={home.heroPhoto} priority className={`${photoTall} lg:min-h-[380px]`} />
         </div>
     </PageSection>
   );

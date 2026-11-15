@@ -44,3 +44,9 @@ export const proseText = "text-base leading-relaxed text-[#5C7380]";
 export const chip = "rounded-full px-3 py-1.5 text-sm text-[#153C4B]";
 
 export const accentIcon = "h-4 w-4 shrink-0 text-[#0B82B4]";
+
+export const cardGrid = "mt-8 grid gap-4 md:grid-cols-3";
+
+export const mediaFrame = "relative overflow-hidden rounded-[1.75rem] border border-[#D5E3EC] bg-[#E7F4FB]";
+
+export const photoTall = "min-h-[240px] sm:min-h-[320px]";

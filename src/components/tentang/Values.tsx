@@ -2,7 +2,7 @@ import type { Value } from "@/content/site";
 import { site } from "@/content/site";
 import { PageSection } from "@/components/layout/PageSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { bodyText, cardTitle, surfaceCard } from "@/components/ui/styles";
+import { bodyText, cardGrid, cardTitle, surfaceCard } from "@/components/ui/styles";
 
 function ValueCard({ value, className = "", bodyClass = "" }: { value: Value; className?: string; bodyClass?: string }) {
   return (
@@ -22,7 +22,7 @@ export function Values() {
   return (
     <PageSection tone="white">
         <SectionHeading title={tentang.valuesTitle} />
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className={cardGrid}>
           {featured.map((value) => (
             <ValueCard key={value.index} value={value} />
           ))}

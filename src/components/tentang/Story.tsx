@@ -2,7 +2,7 @@ import { site } from "@/content/site";
 import { PageSection } from "@/components/layout/PageSection";
 import { PhotoSlot } from "@/components/ui/PhotoSlot";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { chip, proseText } from "@/components/ui/styles";
+import { chip, photoTall, proseText } from "@/components/ui/styles";
 
 export function Story() {
   const { tentang } = site;
@@ -15,7 +15,7 @@ export function Story() {
             <p className={`mt-4 max-w-xl ${proseText}`}>{tentang.story}</p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[#153C4B]">{tentang.belief}</p>
           </div>
-          <PhotoSlot photo={tentang.portrait} className="min-h-[240px] sm:min-h-[320px]" />
+          <PhotoSlot photo={tentang.portrait} className={photoTall} />
         </div>
         <div className="mt-12">
           <h2 className="text-2xl font-extrabold tracking-tight text-[#102A3A] sm:text-3xl">{tentang.segmentsTitle}</h2>

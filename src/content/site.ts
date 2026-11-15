@@ -3,6 +3,10 @@
  * whatsappNumber is digits only, with the country code and no plus sign.
  */
 
+import laundryFloor from "@/asset/foto_laundry_swaca.jpeg";
+import laundryFront from "@/asset/foto_laundry_tampak_depan_swaca.jpeg";
+import laundryEntrance from "@/asset/foto_laundry_tampak_samping_swaca.jpeg";
+
 export type PageId = "beranda" | "layanan" | "tentang" | "kontak";
 
 export type IconName =
@@ -358,8 +362,9 @@ export const site = {
     },
     heroPhoto: {
       id: "hero-laundry",
-      caption: "Foto outlet SWACA Clean & Care",
-      alt: "Foto outlet SWACA Clean & Care",
+      caption: "Pintu masuk outlet SWACA Clean & Care",
+      alt: "Pintu masuk outlet SWACA Clean & Care",
+      src: laundryEntrance.src,
     },
     services: {
       eyebrow: "LAYANAN KAMI",
@@ -381,7 +386,7 @@ export const site = {
           id: "satuan",
           icon: "shirt",
           title: "Handuk, selimut, dan bed cover",
-          description: "Handuk, selimut, sofa cover, dan bed cover sesuai ukuran. Dihitung per potong.",
+          description: "Handuk dihitung per kilogram. Selimut, sofa cover, dan bed cover dihitung per potong.",
           cta: {
             kind: "whatsapp",
             id: "service-satuan",
@@ -427,7 +432,7 @@ export const site = {
         {
           index: "2",
           title: "Kami jemput",
-          description: "Kurir kami datang sesuai jadwal, perlengkapan dicatat per potong.",
+          description: "Kurir kami datang sesuai jadwal, perlengkapan dicatat per kilogram atau per potong.",
         },
         {
           index: "3",
@@ -466,7 +471,7 @@ export const site = {
       eyebrow: "HARGA MULAI DARI",
       title: "Harga terjangkau, hasil maksimal",
       lines: [
-        { id: "preview-seprei", name: "Seprei / linen", priceLabel: "Rp8.000/pcs" },
+        { id: "preview-seprei", name: "Seprei / linen", priceLabel: "Rp8.000/kg" },
         { id: "preview-selimut", name: "Selimut tebal", priceLabel: "Rp10.000/pcs" },
         { id: "preview-bed-cover", name: "Bed cover kecil", priceLabel: "Rp25.000/pcs" },
       ],
@@ -511,19 +516,19 @@ export const site = {
         id: "satuan",
         icon: "shirt",
         title: "Satuan",
-        description: "Linen, handuk, selimut, sofa, dan bed cover untuk kebutuhan operasional. Dihitung per potong.",
+        description: "Seprei, handuk, dan sarung bantal dihitung per kilogram. Duvet, bed cover, dan item lain dihitung per potong.",
         lines: [
-          { id: "satuan-seprei", name: "Seprei / linen", priceLabel: "Rp8.000/pcs" },
-          { id: "satuan-sarung-bantal", name: "Sarung bantal", priceLabel: "Rp8.000/pcs" },
+          { id: "satuan-seprei", name: "Seprei / linen", priceLabel: "Rp8.000/kg" },
+          { id: "satuan-sarung-bantal", name: "Sarung bantal", priceLabel: "Rp8.000/kg" },
           { id: "satuan-sarung-guling", name: "Sarung guling", priceLabel: "Rp8.000/pcs" },
           { id: "satuan-duvet", name: "Duvet", priceLabel: "Rp8.000/pcs" },
           { id: "satuan-selimut-tebal", name: "Selimut tebal", priceLabel: "Rp10.000/pcs" },
           { id: "satuan-selimut-tipis", name: "Selimut tipis", priceLabel: "Rp8.000/pcs" },
-          { id: "satuan-handuk-mandi", name: "Handuk mandi", priceLabel: "Rp8.000/pcs" },
-          { id: "satuan-handuk-kolam", name: "Handuk kolam", priceLabel: "Rp8.000/pcs" },
-          { id: "satuan-handuk-muka", name: "Handuk muka", priceLabel: "Rp8.000/pcs" },
+          { id: "satuan-handuk-mandi", name: "Handuk mandi", priceLabel: "Rp8.000/kg" },
+          { id: "satuan-handuk-kolam", name: "Handuk kolam", priceLabel: "Rp8.000/kg" },
+          { id: "satuan-handuk-muka", name: "Handuk muka", priceLabel: "Rp8.000/kg" },
           { id: "satuan-sofa-cover", name: "Sofa cover", priceLabel: "Rp8.000/pcs" },
-          { id: "satuan-sarung-bantal-sofa", name: "Sarung bantal sofa", priceLabel: "Rp8.000/pcs" },
+          { id: "satuan-sarung-bantal-sofa", name: "Sarung bantal sofa", priceLabel: "Rp8.000/kg" },
           { id: "satuan-bed-cover-kecil", name: "Bed cover kecil", priceLabel: "Rp25.000/pcs" },
           { id: "satuan-bed-cover-sedang", name: "Bed cover sedang", priceLabel: "Rp35.000/pcs" },
           { id: "satuan-bed-cover-besar", name: "Bed cover besar", priceLabel: "Rp45.000/pcs" },
@@ -570,7 +575,7 @@ export const site = {
       },
       {
         title: "Perhitungan",
-        body: "Pesanan dicatat per potong, total dikirim lewat WhatsApp.",
+        body: "Pesanan dicatat per kilogram atau per potong, total dikirim lewat WhatsApp.",
       },
       {
         title: "Pembayaran",
@@ -596,9 +601,10 @@ export const site = {
     belief:
       "SWACA adalah partner laundry bagi segmen hospitality dan bisnis komersial. Sasaran layanan meliputi villa, hotel, gym dan fitness center, spa dan massage, restaurant, serta event organizer dan wedding organizer.",
     portrait: {
-      id: "owner",
-      caption: "Foto pemilik atau tim",
-      alt: "Foto pemilik atau tim SWACA",
+      id: "mesin-depan",
+      caption: "Mesin cuci dan pengering SWACA",
+      alt: "Mesin cuci dan pengering SWACA Clean & Care",
+      src: laundryFront.src,
     },
     valuesTitle: "Nilai yang kami pegang",
     values: [
@@ -634,9 +640,24 @@ export const site = {
     ],
     galleryTitle: "Tempat kami",
     gallery: [
-      { id: "mesin-cuci", caption: "Foto mesin cuci", alt: "Foto mesin cuci SWACA" },
-      { id: "area-setrika", caption: "Foto area setrika", alt: "Foto area setrika SWACA" },
-      { id: "siap-antar", caption: "Foto cucian siap antar", alt: "Foto cucian SWACA yang siap diantar" },
+      {
+        id: "mesin-depan",
+        caption: "Mesin cuci dan pengering",
+        alt: "Tampak depan mesin cuci dan pengering SWACA",
+        src: laundryFront.src,
+      },
+      {
+        id: "area-cuci",
+        caption: "Area cuci",
+        alt: "Area cuci SWACA dengan mesin dan keranjang cucian",
+        src: laundryFloor.src,
+      },
+      {
+        id: "pintu-masuk",
+        caption: "Pintu masuk outlet",
+        alt: "Pintu masuk outlet SWACA Clean & Care",
+        src: laundryEntrance.src,
+      },
     ],
   },
   kontak: {

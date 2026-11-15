@@ -1,7 +1,7 @@
 import { site } from "@/content/site";
 
 /** Digits-only WhatsApp number for wa.me, country code included. */
-export function whatsappNumber(): string {
+function whatsappNumber(): string {
   return site.contact.whatsappNumber.replace(/\D/g, "");
 }
 
