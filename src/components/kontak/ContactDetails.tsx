@@ -7,7 +7,7 @@ import { CtaLink } from "@/components/ui/CtaLink";
 import { IconBadge } from "@/components/ui/IconBadge";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ChatCtaLabel } from "@/components/ui/SiteIcon";
-import { bodyText, inlineTextLink, primaryButtonBlock, surface } from "@/components/ui/styles";
+import { bodyText, inlineTextLink, primaryButtonBlock, surface, twoColumnGrid } from "@/components/ui/styles";
 
 function InfoCard({ icon, label, children }: { icon: IconName; label: string; children: ReactNode }) {
   return (
@@ -41,7 +41,7 @@ export function ContactDetails() {
     <PageSection pad="page">
         <SectionHeading as="h1" className="max-w-3xl" eyebrow={kontak.eyebrow} title={kontak.title} description={kontak.intro} />
 
-        <div className="mt-8 grid items-stretch gap-4 lg:grid-cols-2 lg:gap-6">
+        <div className={twoColumnGrid}>
           <div className="flex flex-col gap-4">
             <InfoCard icon={kontak.addressIcon} label={kontak.addressLabel}>
               <p className={`mt-1 text-pretty ${bodyText}`}>{site.address.display}</p>

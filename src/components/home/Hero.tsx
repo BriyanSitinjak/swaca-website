@@ -3,7 +3,7 @@ import { PageSection } from "@/components/layout/PageSection";
 import { CtaLink } from "@/components/ui/CtaLink";
 import { PhotoSlot } from "@/components/ui/PhotoSlot";
 import { ChatCtaLabel, SiteIcon } from "@/components/ui/SiteIcon";
-import { accentIcon, photoTall, primaryButton, proseText, secondaryButton } from "@/components/ui/styles";
+import { accentIcon, leadText, photoTall, primaryButton, secondaryButton } from "@/components/ui/styles";
 
 export function Hero() {
   const home = site.home;
@@ -18,7 +18,7 @@ export function Hero() {
             <h1 className="mt-5 text-[2rem] leading-[1.15] font-extrabold tracking-tight text-[#102A3A] sm:text-5xl">
               {home.title}
             </h1>
-            <p className={`mt-4 max-w-xl ${proseText}`}>{home.subtitle}</p>
+            <p className={leadText}>{home.subtitle}</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <CtaLink cta={home.primaryCta} className={primaryButton}>
                 <ChatCtaLabel label={home.primaryCta.label} />

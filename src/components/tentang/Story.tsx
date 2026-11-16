@@ -2,7 +2,7 @@ import { site } from "@/content/site";
 import { PageSection } from "@/components/layout/PageSection";
 import { PhotoSlot } from "@/components/ui/PhotoSlot";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { chip, photoTall, proseText } from "@/components/ui/styles";
+import { chip, leadText, photoTall } from "@/components/ui/styles";
 
 export function Story() {
   const { tentang } = site;
@@ -12,7 +12,7 @@ export function Story() {
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           <div>
             <SectionHeading as="h1" className="max-w-xl" eyebrow={tentang.eyebrow} title={tentang.title} />
-            <p className={`mt-4 max-w-xl ${proseText}`}>{tentang.story}</p>
+            <p className={leadText}>{tentang.story}</p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[#153C4B]">{tentang.belief}</p>
           </div>
           <PhotoSlot photo={tentang.portrait} className={photoTall} />

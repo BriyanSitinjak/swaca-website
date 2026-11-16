@@ -25,7 +25,7 @@ export const inverseButton = `${buttonBase} w-full bg-white text-[#153C4B] hover
 
 export const headerButton = `items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold transition-colors ${primaryFill} ${focusRing}`;
 
-export const textLink = `font-semibold text-[#0B82B4] underline decoration-[#0B82B4]/30 underline-offset-4 transition-colors hover:text-[#086F9A] ${focusRing}`;
+const textLink = `font-semibold text-[#0B82B4] underline decoration-[#0B82B4]/30 underline-offset-4 transition-colors hover:text-[#086F9A] ${focusRing}`;
 
 export const inlineTextLink = `inline-flex text-sm ${textLink}`;
 
@@ -46,6 +46,10 @@ export const chip = "rounded-full px-3 py-1.5 text-sm text-[#153C4B]";
 export const accentIcon = "h-4 w-4 shrink-0 text-[#0B82B4]";
 
 export const cardGrid = "mt-8 grid gap-4 md:grid-cols-3";
+
+export const twoColumnGrid = "mt-8 grid items-stretch gap-4 lg:grid-cols-2 lg:gap-6";
+
+export const leadText = `mt-4 max-w-xl ${proseText}`;
 
 export const mediaFrame = "relative overflow-hidden rounded-[1.75rem] border border-[#D5E3EC] bg-[#E7F4FB]";
 

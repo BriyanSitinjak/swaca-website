@@ -68,11 +68,10 @@ export type ServiceHighlight = {
 };
 
 export type ServiceGroup = {
-  id: "satuan" | "express" | "noda";
+  id: "satuan" | "express";
   icon: IconName;
   title: string;
   description: string;
-  badge?: string;
   lines: PriceLine[];
   cta: WhatsAppCta;
 };
@@ -132,9 +131,14 @@ export type SiteContent = {
     summary: string;
     rows: string[];
   };
-  areas: string[];
-  pickupFeeNote: string;
-  outsideAreaNote: string;
+  pickup: {
+    title: string;
+    freeNote: string;
+    schedule: string;
+    paidNote: string;
+    fees: PriceLine[];
+    billingNote: string;
+  };
   nav: NavItem[];
   chrome: {
     openMenuLabel: string;
@@ -184,8 +188,6 @@ export type SiteContent = {
       lines: PriceLine[];
       detailCta: InternalCta;
       areaTitle: string;
-      areaMissingNote: string;
-      areaMissingCta: WhatsAppCta;
       areaMapCta: InternalCta;
     };
     closing: {
@@ -239,7 +241,6 @@ export type SiteContent = {
 
 const satuanMessage = "Halo, saya mau pesan laundry satuan";
 const expressMessage = "Halo, saya mau pesan laundry express";
-const nodaMessage = "Halo, saya mau tanya layanan penghilangan noda";
 
 export const site = {
   business: {
@@ -270,9 +271,18 @@ export const site = {
     summary: "Buka 08:00 - 17:00 WIB",
     rows: ["Senin sampai Sabtu: [jam]", "Minggu: [jam / tutup]"],
   },
-  areas: ["Bogor"],
-  pickupFeeNote: "Area layanan hingga radius ±10 km dari outlet SWACA",
-  outsideAreaNote: "Di luar area layanan? Tanyakan dulu lewat WhatsApp.",
+  pickup: {
+    title: "Biaya antar jemput",
+    freeNote: "Penjemputan dan pengantaran gratis untuk berat kering minimum 10 kg, maksimal radius 7 km.",
+    schedule: "Jadwal antar jemput: setiap hari, pukul 13:00 - 17:00 WIB.",
+    paidNote: "Berat kering di bawah 10 kg dikenakan biaya antar jemput.",
+    fees: [
+      { id: "pickup-5", name: "Radius 5 km", priceLabel: "Rp5.000" },
+      { id: "pickup-above-5", name: "Radius di atas 5 km", priceLabel: "Rp10.000" },
+      { id: "pickup-above-10", name: "Radius di atas 10 km", priceLabel: "Rp15.000" },
+    ],
+    billingNote: "Biaya ditambahkan ke tagihan laundry.",
+  },
   nav: [
     { label: "Beranda", href: "/" },
     { label: "Layanan & Harga", href: "/layanan" },
@@ -410,7 +420,7 @@ export const site = {
           id: "antar-jemput",
           icon: "truck",
           title: "Antar Jemput",
-          description: "Kami jemput dan antar linen serta perlengkapan di area layanan kami.",
+          description: "Gratis untuk berat kering minimum 10 kg dalam radius 7 km. Setiap hari, pukul 13:00 - 17:00.",
           cta: {
             kind: "internal",
             id: "service-antar-jemput",
@@ -432,7 +442,7 @@ export const site = {
         {
           index: "2",
           title: "Kami jemput",
-          description: "Kurir kami datang sesuai jadwal, perlengkapan dicatat per kilogram atau per potong.",
+          description: "Kurir datang setiap hari pukul 13:00 - 17:00. Perlengkapan dicatat per kilogram atau per potong.",
         },
         {
           index: "3",
@@ -481,18 +491,11 @@ export const site = {
         label: "Lihat daftar harga lengkap",
         href: "/layanan",
       },
-      areaTitle: "Area antar jemput",
-      areaMissingNote: "Alamat Anda tidak ada di daftar?",
-      areaMissingCta: {
-        kind: "whatsapp",
-        id: "home-area-ask",
-        label: "Tanyakan saja lewat WhatsApp",
-        message: "Halo, alamat saya belum ada di daftar area antar jemput. Apakah bisa dijemput?",
-      },
+      areaTitle: "Antar jemput",
       areaMapCta: {
         kind: "internal",
         id: "home-area-map",
-        label: "Lihat peta area layanan",
+        label: "Lihat biaya antar jemput",
         href: "/kontak",
       },
     },
@@ -541,19 +544,6 @@ export const site = {
         },
       },
       {
-        id: "noda",
-        icon: "check",
-        title: "Penghilangan noda",
-        description: "Tersedia sebagai layanan tambahan. Harga perlu dikonfirmasi.",
-        lines: [{ id: "noda-stain", name: "Penghilangan noda", priceLabel: "Perlu dikonfirmasi" }],
-        cta: {
-          kind: "whatsapp",
-          id: "layanan-noda",
-          label: "Tanya penghilangan noda",
-          message: nodaMessage,
-        },
-      },
-      {
         id: "express",
         icon: "bolt",
         title: "Express",
@@ -569,10 +559,6 @@ export const site = {
     ],
     notesTitle: "Yang perlu Anda tahu",
     notes: [
-      {
-        title: "Biaya antar jemput",
-        body: "TBD",
-      },
       {
         title: "Perhitungan",
         body: "Pesanan dicatat per kilogram atau per potong, total dikirim lewat WhatsApp.",
