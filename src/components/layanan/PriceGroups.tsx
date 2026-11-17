@@ -5,14 +5,14 @@ import { IconBadge } from "@/components/ui/IconBadge";
 import { PriceLines } from "@/components/ui/PriceLines";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ChatCtaLabel } from "@/components/ui/SiteIcon";
-import { bodyText, primaryButtonBlock, surfaceCard } from "@/components/ui/styles";
+import { cardBody, primaryButtonBlock, surfaceCard } from "@/components/ui/styles";
 
 function PriceCard({ group }: { group: ServiceGroup }) {
   return (
     <article className={`flex flex-col ${surfaceCard}`}>
       <IconBadge name={group.icon} />
       <h2 className="mt-4 text-xl font-bold text-[#102A3A]">{group.title}</h2>
-      <p className={`mt-2 ${bodyText}`}>{group.description}</p>
+      <p className={cardBody}>{group.description}</p>
       <div className="mt-5">
         <PriceLines lines={group.lines} compact />
       </div>

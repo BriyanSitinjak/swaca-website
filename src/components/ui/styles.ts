@@ -39,6 +39,8 @@ export const cardTitle = "text-lg font-bold text-[#102A3A]";
 
 export const bodyText = "text-sm leading-relaxed text-[#5C7380]";
 
+export const cardBody = `mt-2 ${bodyText}`;
+
 export const proseText = "text-base leading-relaxed text-[#5C7380]";
 
 export const chip = "rounded-full px-3 py-1.5 text-sm text-[#153C4B]";

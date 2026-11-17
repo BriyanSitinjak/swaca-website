@@ -1,6 +1,6 @@
 import { site } from "@/content/site";
 import { PriceLines } from "@/components/ui/PriceLines";
-import { bodyText, cardTitle } from "@/components/ui/styles";
+import { bodyText, cardBody, cardTitle } from "@/components/ui/styles";
 
 export function PickupSummary() {
   const { pickup } = site;
@@ -8,7 +8,7 @@ export function PickupSummary() {
   return (
     <>
       <p className={`mt-3 text-pretty ${bodyText}`}>{pickup.freeNote}</p>
-      <p className={`mt-2 ${bodyText}`}>{pickup.schedule}</p>
+      <p className={cardBody}>{pickup.schedule}</p>
     </>
   );
 }

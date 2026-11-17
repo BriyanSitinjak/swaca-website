@@ -5,6 +5,7 @@
 
 import laundryFloor from "@/asset/foto_laundry_swaca.jpeg";
 import laundryFront from "@/asset/foto_laundry_tampak_depan_swaca.jpeg";
+import laundryInterior from "@/asset/foto_laundry_tampak_dalam_atas_swaca.jpeg";
 import laundryEntrance from "@/asset/foto_laundry_tampak_samping_swaca.jpeg";
 
 export type PageId = "beranda" | "layanan" | "tentang" | "kontak";
@@ -372,9 +373,9 @@ export const site = {
     },
     heroPhoto: {
       id: "hero-laundry",
-      caption: "Pintu masuk outlet SWACA Clean & Care",
-      alt: "Pintu masuk outlet SWACA Clean & Care",
-      src: laundryEntrance.src,
+      caption: "Mesin cuci dan pengering SWACA",
+      alt: "Tampak depan mesin cuci dan pengering SWACA Clean & Care",
+      src: laundryFront.src,
     },
     services: {
       eyebrow: "LAYANAN KAMI",
@@ -643,6 +644,12 @@ export const site = {
         caption: "Pintu masuk outlet",
         alt: "Pintu masuk outlet SWACA Clean & Care",
         src: laundryEntrance.src,
+      },
+      {
+        id: "area-dalam",
+        caption: "Area dalam outlet",
+        alt: "Tampak dalam outlet SWACA dengan mesin cuci, pengering, dan keranjang cucian",
+        src: laundryInterior.src,
       },
     ],
   },

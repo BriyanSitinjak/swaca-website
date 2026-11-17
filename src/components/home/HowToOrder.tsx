@@ -1,7 +1,7 @@
 import { site } from "@/content/site";
 import { PageSection } from "@/components/layout/PageSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { bodyText, cardGrid, cardShadow, cardTitle } from "@/components/ui/styles";
+import { cardBody, cardGrid, cardShadow, cardTitle } from "@/components/ui/styles";
 
 export function HowToOrder() {
   const { steps } = site.home;
@@ -16,7 +16,7 @@ export function HowToOrder() {
                 {step.index}
               </span>
               <h3 className={`mt-4 ${cardTitle}`}>{step.title}</h3>
-              <p className={`mt-2 ${bodyText}`}>{step.description}</p>
+              <p className={cardBody}>{step.description}</p>
             </li>
           ))}
         </ol>

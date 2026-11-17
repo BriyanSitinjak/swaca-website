@@ -3,7 +3,7 @@ import { PageSection } from "@/components/layout/PageSection";
 import { ClosingBanner } from "@/components/ui/ClosingBanner";
 import { PickupPolicy } from "@/components/ui/PickupPolicy";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { bodyText, cardTitle, surfaceCard } from "@/components/ui/styles";
+import { cardBody, cardTitle, surfaceCard } from "@/components/ui/styles";
 
 export function ServiceNotes() {
   const { layanan } = site;
@@ -19,7 +19,7 @@ export function ServiceNotes() {
           {layanan.notes.map((note) => (
             <article key={note.title} className={surfaceCard}>
               <h3 className={cardTitle}>{note.title}</h3>
-              <p className={`mt-2 ${bodyText}`}>{note.body}</p>
+              <p className={cardBody}>{note.body}</p>
             </article>
           ))}
         </div>
