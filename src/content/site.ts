@@ -248,7 +248,7 @@ export const site = {
     name: "SWACA",
     legalName: "SWACA Clean & Care",
     tagline: "CLEAN & CARE",
-    description: "Laundry linen, handuk, dan perlengkapan operasional untuk hospitality dan bisnis.",
+    description: "Laundry cucian, handuk, dan perlengkapan operasional untuk hospitality dan bisnis.",
     url: "https://swacacleancare.com/",
     locale: "id-ID",
     logoAlt: "Logo SWACA Clean & Care",
@@ -329,14 +329,14 @@ export const site = {
         path: "/",
         title: "SWACA Clean & Care | Laundry Hospitality Sentul City",
         description:
-          "Solusi laundry untuk kebutuhan hospitality dan bisnis di Sentul City, Bogor. Linen, handuk, dan perlengkapan operasional.",
+          "Solusi laundry untuk kebutuhan hospitality dan bisnis di Sentul City, Bogor. Cucian, handuk, dan perlengkapan operasional.",
       },
       {
         id: "layanan",
         path: "/layanan",
         title: "Layanan & Harga | SWACA Clean & Care",
         description:
-          "Daftar harga laundry linen, handuk, selimut, sofa, dan bed cover. Express tersedia dengan biaya tambahan 100%.",
+          "Daftar harga laundry cucian, handuk, selimut, sofa, dan bed cover. Express tersedia dengan biaya tambahan 100%.",
       },
       {
         id: "tentang",
@@ -358,7 +358,7 @@ export const site = {
     eyebrow: "Sentul City · Kabupaten Bogor",
     title: "SWACA Laundry — Clean & Care",
     subtitle:
-      "Solusi laundry untuk kebutuhan hospitality dan bisnis Anda. Membantu menjaga linen, handuk, dan perlengkapan operasional tetap bersih serta siap digunakan.",
+      "Solusi laundry untuk kebutuhan hospitality dan bisnis Anda. Membantu menjaga cucian, handuk, dan perlengkapan operasional tetap bersih serta siap digunakan.",
     primaryCta: {
       kind: "whatsapp",
       id: "hero",
@@ -379,13 +379,13 @@ export const site = {
     },
     services: {
       eyebrow: "LAYANAN KAMI",
-      title: "Layanan untuk linen dan perlengkapan operasional",
+      title: "Layanan laundry untuk linen, kafe, dan gym",
       items: [
         {
           id: "linen",
           icon: "bag",
           title: "Linen & perlengkapan tidur",
-          description: "Seprei, sarung bantal, sarung guling, dan duvet untuk villa, hotel, dan penginapan.",
+          description: "Seprei, sarung bantal, sarung guling, dan duvet untuk villa, hotel, dan penginapan. Juga kebutuhan laundry untuk kafe dan gym.",
           cta: {
             kind: "whatsapp",
             id: "service-linen",
@@ -433,12 +433,12 @@ export const site = {
     },
     steps: {
       eyebrow: "CARA PESAN",
-      title: "Tiga langkah, linen siap digunakan",
+      title: "Tiga langkah, cucian siap digunakan",
       items: [
         {
           index: "1",
           title: "Chat WhatsApp",
-          description: "Pilih layanan dan kirim kebutuhan linen atau perlengkapan lewat WhatsApp.",
+          description: "Pilih layanan dan kirim kebutuhan cucian atau perlengkapan lewat WhatsApp.",
         },
         {
           index: "2",
@@ -448,7 +448,7 @@ export const site = {
         {
           index: "3",
           title: "Siap digunakan",
-          description: "Linen, handuk, dan perlengkapan kembali bersih serta siap dipakai.",
+          description: "Cucian, handuk, dan perlengkapan kembali bersih serta siap dipakai.",
         },
       ],
     },
@@ -474,7 +474,7 @@ export const site = {
         {
           icon: "check",
           title: "Siap digunakan",
-          description: "Linen, handuk, dan perlengkapan kembali bersih serta siap dipakai.",
+          description: "Cucian, handuk, dan perlengkapan kembali bersih serta siap dipakai.",
         },
       ],
     },
@@ -502,7 +502,7 @@ export const site = {
     },
     closing: {
       title: "Butuh partner laundry untuk bisnis Anda?",
-      subtitle: "Ceritakan kebutuhan linen atau perlengkapan operasional Anda lewat WhatsApp.",
+      subtitle: "Ceritakan kebutuhan cucian atau perlengkapan operasional Anda lewat WhatsApp.",
       cta: {
         kind: "whatsapp",
         id: "home-closing",
@@ -513,7 +513,7 @@ export const site = {
   },
   layanan: {
     eyebrow: "LAYANAN & HARGA",
-    title: "Harga jelas untuk linen dan perlengkapan operasional",
+    title: "Harga jelas untuk cucian dan perlengkapan operasional",
     intro: "Pilih layanan, lalu tekan tombol Pesan. WhatsApp akan terbuka dengan pesan yang sudah terisi.",
     groups: [
       {
@@ -571,7 +571,7 @@ export const site = {
     ],
     closing: {
       title: "Belum yakin pilih yang mana?",
-      subtitle: "Ceritakan kebutuhan linen Anda, kami bantu pilihkan layanan yang paling pas.",
+      subtitle: "Ceritakan kebutuhan cucian Anda, kami bantu pilihkan layanan yang paling pas.",
       cta: {
         kind: "whatsapp",
         id: "layanan-closing",
@@ -584,7 +584,7 @@ export const site = {
     eyebrow: "TENTANG KAMI",
     title: "Partner laundry untuk hospitality dan bisnis di Sentul City",
     story:
-      "SWACA Clean & Care merupakan layanan laundry yang berlokasi di kawasan Sentul City, Kabupaten Bogor. SWACA melayani kebutuhan pencucian dan perawatan berbagai perlengkapan berbahan tekstil, termasuk linen, sprei, duvet, selimut, handuk, serta perlengkapan lainnya.",
+      "SWACA Clean & Care merupakan layanan laundry yang berlokasi di kawasan Sentul City, Kabupaten Bogor. SWACA melayani kebutuhan cucian dan perawatan berbagai perlengkapan berbahan tekstil, seperti sprei, duvet, selimut, handuk, serta perlengkapan lainnya.",
     belief:
       "SWACA adalah partner laundry bagi segmen hospitality dan bisnis komersial. Sasaran layanan meliputi villa, hotel, gym dan fitness center, spa dan massage, restaurant, serta event organizer dan wedding organizer.",
     portrait: {
@@ -655,7 +655,7 @@ export const site = {
   },
   kontak: {
     eyebrow: "KONTAK & AREA LAYANAN",
-    title: "Kami jemput linen dan perlengkapan di area berikut",
+    title: "Kami jemput cucian dan perlengkapan di area berikut",
     intro: "Hubungi kami lewat WhatsApp atau datang langsung ke tempat kami.",
     addressLabel: "Alamat",
     addressIcon: "pin",
@@ -673,7 +673,7 @@ export const site = {
       kind: "whatsapp",
       id: "kontak-pickup",
       label: "Minta dijemput",
-      message: "Halo, saya mau minta linen dijemput",
+      message: "Halo, saya mau minta cucian dijemput",
     },
     mapCaption: "Peta lokasi SWACA Clean & Care",
     areaTitle: "Area antar jemput",
