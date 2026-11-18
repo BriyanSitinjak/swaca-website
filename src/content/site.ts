@@ -274,9 +274,9 @@ export const site = {
   },
   pickup: {
     title: "Biaya antar jemput",
-    freeNote: "Penjemputan dan pengantaran gratis untuk berat kering minimum 10 kg, maksimal radius 7 km.",
+    freeNote: "Penjemputan dan pengantaran gratis untuk berat minimum 10 kg, maksimal radius 7 km.",
     schedule: "Jadwal antar jemput: setiap hari, pukul 13:00 - 17:00 WIB.",
-    paidNote: "Berat kering di bawah 10 kg dikenakan biaya antar jemput.",
+    paidNote: "Berat di bawah 10 kg dikenakan biaya antar jemput.",
     fees: [
       { id: "pickup-5", name: "Radius 5 km", priceLabel: "Rp5.000" },
       { id: "pickup-above-5", name: "Radius di atas 5 km", priceLabel: "Rp10.000" },
@@ -397,7 +397,7 @@ export const site = {
           id: "satuan",
           icon: "shirt",
           title: "Handuk, selimut, dan bed cover",
-          description: "Handuk dihitung per kilogram. Selimut, sofa cover, dan bed cover dihitung per potong.",
+          description: "Handuk, selimut, dan sofa cover dihitung per kilogram. Bed cover dihitung per potong.",
           cta: {
             kind: "whatsapp",
             id: "service-satuan",
@@ -421,7 +421,7 @@ export const site = {
           id: "antar-jemput",
           icon: "truck",
           title: "Antar Jemput",
-          description: "Gratis untuk berat kering minimum 10 kg dalam radius 7 km. Setiap hari, pukul 13:00 - 17:00.",
+          description: "Gratis untuk berat minimum 10 kg dalam radius 7 km. Setiap hari, pukul 13:00 - 17:00.",
           cta: {
             kind: "internal",
             id: "service-antar-jemput",
@@ -483,7 +483,7 @@ export const site = {
       title: "Harga terjangkau, hasil maksimal",
       lines: [
         { id: "preview-seprei", name: "Seprei / linen", priceLabel: "Rp8.000/kg" },
-        { id: "preview-selimut", name: "Selimut tebal", priceLabel: "Rp10.000/pcs" },
+        { id: "preview-selimut", name: "Selimut tebal", priceLabel: "Rp10.000/kg" },
         { id: "preview-bed-cover", name: "Bed cover kecil", priceLabel: "Rp25.000/pcs" },
       ],
       detailCta: {
@@ -520,18 +520,18 @@ export const site = {
         id: "satuan",
         icon: "shirt",
         title: "Satuan",
-        description: "Seprei, handuk, dan sarung bantal dihitung per kilogram. Duvet, bed cover, dan item lain dihitung per potong.",
+        description: "Semua item dihitung per kilogram, kecuali bed cover yang dihitung per potong.",
         lines: [
           { id: "satuan-seprei", name: "Seprei / linen", priceLabel: "Rp8.000/kg" },
           { id: "satuan-sarung-bantal", name: "Sarung bantal", priceLabel: "Rp8.000/kg" },
-          { id: "satuan-sarung-guling", name: "Sarung guling", priceLabel: "Rp8.000/pcs" },
-          { id: "satuan-duvet", name: "Duvet", priceLabel: "Rp8.000/pcs" },
-          { id: "satuan-selimut-tebal", name: "Selimut tebal", priceLabel: "Rp10.000/pcs" },
-          { id: "satuan-selimut-tipis", name: "Selimut tipis", priceLabel: "Rp8.000/pcs" },
+          { id: "satuan-sarung-guling", name: "Sarung guling", priceLabel: "Rp8.000/kg" },
+          { id: "satuan-duvet", name: "Duvet", priceLabel: "Rp8.000/kg" },
+          { id: "satuan-selimut-tebal", name: "Selimut tebal", priceLabel: "Rp10.000/kg" },
+          { id: "satuan-selimut-tipis", name: "Selimut tipis", priceLabel: "Rp8.000/kg" },
           { id: "satuan-handuk-mandi", name: "Handuk mandi", priceLabel: "Rp8.000/kg" },
           { id: "satuan-handuk-kolam", name: "Handuk kolam", priceLabel: "Rp8.000/kg" },
           { id: "satuan-handuk-muka", name: "Handuk muka", priceLabel: "Rp8.000/kg" },
-          { id: "satuan-sofa-cover", name: "Sofa cover", priceLabel: "Rp8.000/pcs" },
+          { id: "satuan-sofa-cover", name: "Sofa cover", priceLabel: "Rp8.000/kg" },
           { id: "satuan-sarung-bantal-sofa", name: "Sarung bantal sofa", priceLabel: "Rp8.000/kg" },
           { id: "satuan-bed-cover-kecil", name: "Bed cover kecil", priceLabel: "Rp25.000/pcs" },
           { id: "satuan-bed-cover-sedang", name: "Bed cover sedang", priceLabel: "Rp35.000/pcs" },
