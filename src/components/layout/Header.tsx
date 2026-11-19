@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import logoMark from "@/asset/logo-mark.png";
+import logoMark from "@/app/icon.png";
 import { site } from "@/content/site";
 import { normalizePath } from "@/lib/seo";
 import { CtaLink } from "@/components/ui/CtaLink";

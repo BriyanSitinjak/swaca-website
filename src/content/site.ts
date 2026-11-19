@@ -18,7 +18,9 @@ export type IconName =
   | "pin"
   | "clock"
   | "chat"
-  | "check";
+  | "check"
+  | "cafe"
+  | "gym";
 
 export type NavItem = {
   label: string;
@@ -385,12 +387,36 @@ export const site = {
           id: "linen",
           icon: "bag",
           title: "Linen & perlengkapan tidur",
-          description: "Seprei, sarung bantal, sarung guling, dan duvet untuk villa, hotel, dan penginapan. Juga kebutuhan laundry untuk kafe dan gym.",
+          description: "Seprei, sarung bantal, sarung guling, dan duvet untuk villa, hotel, dan penginapan.",
           cta: {
             kind: "whatsapp",
             id: "service-linen",
             label: "Pesan linen",
             message: "Halo, saya mau pesan laundry linen",
+          },
+        },
+        {
+          id: "kafe",
+          icon: "cafe",
+          title: "Kafe",
+          description: "Napkin, apron, lap, dan perlengkapan tekstil lain untuk kafe serta restoran.",
+          cta: {
+            kind: "whatsapp",
+            id: "service-kafe",
+            label: "Pesan untuk kafe",
+            message: "Halo, saya mau pesan laundry untuk kafe",
+          },
+        },
+        {
+          id: "gym",
+          icon: "gym",
+          title: "Gym",
+          description: "Handuk untuk gym dan fitness center. Dihitung per kilogram, sama seperti handuk lainnya.",
+          cta: {
+            kind: "whatsapp",
+            id: "service-gym",
+            label: "Pesan untuk gym",
+            message: "Halo, saya mau pesan laundry untuk gym",
           },
         },
         {

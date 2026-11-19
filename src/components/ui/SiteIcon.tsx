@@ -2,6 +2,8 @@ import type { IconType } from "react-icons";
 import {
   LuCheck,
   LuClock,
+  LuCoffee,
+  LuDumbbell,
   LuMapPin,
   LuMessageCircle,
   LuShirt,
@@ -20,6 +22,8 @@ const icons: Record<IconName, IconType> = {
   clock: LuClock,
   chat: LuMessageCircle,
   check: LuCheck,
+  cafe: LuCoffee,
+  gym: LuDumbbell,
 };
 
 export function SiteIcon({ name, className }: { name: IconName; className?: string }) {
